@@ -1,0 +1,68 @@
+.carousel {
+    padding-top: 10px;
+}
+
+.abt-area {
+    background-color: #f9f9f9;
+}
+
+#nav-division {
+    padding-top: 58px;
+}
+
+.main-title {
+    color: #444;
+    margin: 45px 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title2 {
+    color: #444;
+    margin: 100px 0 45px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.abt-title {
+    font-size: 17px;
+    color: #444;
+    font-weight: bold;
+}
+
+.abt-title2 {
+    color: #444;
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+.abt-title3 {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #444;
+    font-weight: bold;
+}
+
+.abt-list {
+    list-style-position: inside;
+    font-size: 17px;
+    text-align: center;
+}
+
+#copy-area {
+    background-color: #f1f1f1;
+}
+
+#copy-area .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copy-area .container p {
+    margin-bottom: 0;
+}
+
+.embed-responsive {
+    width: 100%;
+}
