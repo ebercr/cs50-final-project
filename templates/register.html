@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="container d-flex justify-content-center box-container-area">
+
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+                <div class="featured-image mb-3">
+                    <img src="/static/register-bot-300px.png" class="img-fluid" style="width: 250px;">
+                </div>
+            </div>
+
+            <div class="col-md-6 right-box">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <h2>Register</h2>
+                        <p>Register for full access.</p>
+                    </div>
+                    <form action="/register" method="post">
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username"
+                                name="username" placeholder="Username" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" class="form-control mx-auto w-auto" id="name"
+                                name="name" placeholder="Name" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" class="form-control mx-auto w-auto" id="password" name="password"
+                                placeholder="Create password" type="password">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" class="form-control mx-auto w-auto" id="confirmation"
+                                name="confirmation" placeholder="Confirm password" type="password">
+                        </div>
+                        <button class="btn btn-primary mb-3"" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

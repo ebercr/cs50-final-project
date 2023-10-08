@@ -21,31 +21,39 @@
 
         <nav class="navbar col-12 position-fixed navbar-expand-lg bg-dark navbar-dark" style="z-index: 999;">
             <div class="container-fluid col-11 m-auto">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <img src="/static/eber-logo.png" alt="Eber Logo" style="width: 50px;">
-                    Home
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="python.html">Python</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="c.html">C</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript.html">JavaScript</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/login">Log In</a>
-                        </li>
-                    </ul>
+                    {% if session["user_id"] %}
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/python">Python</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/c">C</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/javascript">JavaScript</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto mt-2">
+                            <li class="nav-item"><a class="nav-link" href="/account">Accont</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                        </ul>
+                    {% else %}
+                        <ul class="navbar-nav ms-auto mt-2">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">Log In</a>
+                            </li>
+                        </ul>
+                    {% endif %}
                     <form action="https://www.google.com/search" method="get" class="d-flex" role="search">
                         <input name="q" class="form-control me-2" type="search" placeholder="Google Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -54,15 +62,19 @@
             </div>
         </nav>
 
+        <div class="content-top"></div>
+
         {% if get_flashed_messages() %}
         <header>
-            <div class="alert alert-primary mb-0 text-center" role="alert">
-                {{ get_flashed_messages() | join(" ") }}
-            </div>
+            {% for message, category in get_flashed_messages(with_categories=true) %}
+                <div class="alert alert-{{ category }} mb-0 text-center" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
         </header>
         {% endif %}
 
-        <main class="container py-5 text-center">
+        <main class="container pt-0 py-5 text-center">
             {% block main %}{% endblock %}
         </main>
 

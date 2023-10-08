@@ -1,13 +1,17 @@
-.carousel {
-    padding-top: 10px;
+.content-top {
+    padding-top: 58px;
+}
+
+.box-area {
+    width: 700px;
+}
+
+.box-container-area {
+    padding: 92px 0 120px 0;
 }
 
 .abt-area {
     background-color: #f9f9f9;
-}
-
-#nav-division {
-    padding-top: 58px;
 }
 
 .main-title {
