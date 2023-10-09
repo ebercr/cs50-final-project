@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block main %}
-    <div class="container d-flex justify-content-center box-container-area">
+    <div class="container d-flex justify-content-center box-container-area mobile-padding register-padding">
 
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
-            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box green-degrade">
                 <div class="featured-image mb-3">
-                    <img src="/static/register-bot-300px.png" class="img-fluid" style="width: 250px;">
+                    <img src="/static/register-bot-300px.png" class="img-fluid robot_img">
                 </div>
             </div>
 
@@ -37,8 +37,11 @@
                             <input autocomplete="off" class="form-control mx-auto w-auto" id="confirmation"
                                 name="confirmation" placeholder="Confirm password" type="password">
                         </div>
-                        <button class="btn btn-primary mb-3"" type="submit">Register</button>
+                        <button class="btn btn-primary mb-3" type="submit">Register</button>
                     </form>
+                    <div class="row">
+                        <small>Already have an account? <a href="/login">Login</a></small>
+                    </div>
                 </div>
             </div>
         </div>

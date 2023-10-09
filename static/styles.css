@@ -1,5 +1,5 @@
 .content-top {
-    padding-top: 58px;
+    padding-top: 63px;
 }
 
 .box-area {
@@ -23,7 +23,7 @@
 
 .main-title2 {
     color: #444;
-    margin: 100px 0 45px 0;
+    margin: 30px 0 30px 0;
     font-size: 40px;
     text-align: center;
 }
@@ -69,4 +69,45 @@
 
 .embed-responsive {
     width: 100%;
+}
+
+.register-padding {
+    padding-bottom: 40px;
+}
+
+.green-degrade {
+    background: linear-gradient(to bottom, #00FF00, #008000);
+}
+
+.robot_img {
+    width: 250px;
+}
+
+/* Media query para dispositivos móveis (tamanho de tela menor que 768 pixels) */
+@media (max-width: 767px) {
+    .mobile-padding {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .box-area {
+        margin: 0 10px;
+    }
+
+    .left-box {
+        position: relative;
+        height: 130px;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+
+    .robot_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+    }
 }

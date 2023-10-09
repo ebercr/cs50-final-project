@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+<div class="container d-flex justify-content-center box-container-area mobile-padding">
+
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box green-degrade">
+            <div class="featured-image mb-3">
+                <img src="/static/accont-bot-300px.png" class="img-fluid robot_img">
+            </div>
+        </div>
+
+        <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2>Account Information</h2>
+                    <p>Welcome, {{ name }}!</p>
+                    <p>Your username is: <b>{{ username }}</b></p>
+                    <p>Your name is: <b>{{ name }}</b></p>
+                    <p>Your maximum score is: <b>{{ max_score }}</b></p>
+                    <h5>Here, you can change your password.</h5>
+                </div>
+                <form action="/account" method="post">
+                    <div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="old_password" name="old_password" placeholder="Old password" type="password">
+                    </div>
+                    <div class="mb-3">
+                        <input autocomplete="off" class="form-control mx-auto w-auto" id="new_password" name="new_password" placeholder="New password" type="password">
+                    </div>
+                    <div class="mb-3">
+                        <input autocomplete="off" class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm new password" type="password">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Change Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
