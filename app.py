@@ -14,18 +14,22 @@ app.secret_key = os.urandom(24)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///final_project.db")
 
+
 def login_required(f):
     """
     Decorate routes to require login.
 
     http://flask.pocoo.org/docs/0.12/patterns/viewdecorators/
     """
+
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if session.get("user_id") is None:
             return redirect("/login")
         return f(*args, **kwargs)
+
     return decorated_function
+
 
 @app.route("/")
 @login_required
@@ -61,15 +65,15 @@ def register():
         elif not confirmation:
             flash("danger", "Must confirm your password")
             return redirect("/register")
-        elif  password != confirmation:             
+        elif password != confirmation:
             flash("danger", "The password and confirmation do not match")
             return redirect("/register")
-        
+
         # Validate the minimum and maximum length for name, username and password
         if len(username) < 3 or len(username) > 50:
             flash("danger", "Username must be between 3 and 50 characters.")
             return redirect("/register")
-        
+
         if len(name) < 2 or len(name) > 255:
             flash("danger", "Name must be between 2 and 255 characters.")
             return redirect("/register")
@@ -77,18 +81,25 @@ def register():
         if len(password) < 8 or len(password) > 128:
             flash("danger", "Password must be between 8 and 128 characters.")
             return redirect("/register")
-        
+
         # Ensure if the username is not already taken
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
         if len(rows) != 0:
             flash("danger", "This username is already taken")
             return redirect("/register")
-        
+
         # Generate a hash of the password
         hashed_password = sha256_crypt.encrypt(password)
 
         # Add the user to the users database
-        db.execute("INSERT INTO users (username, hash, name) VALUES(?,?,?)", username, hashed_password, name)
+        db.execute(
+            "INSERT INTO users (username, hash, name) VALUES(?,?,?)",
+            username,
+            hashed_password,
+            name,
+        )
 
         # Query database for user
         user = db.execute("SELECT * FROM users WHERE username = ?", username)
@@ -97,10 +108,10 @@ def register():
         session["user_id"] = user[0]["id"]
         flash("success", f"Successfully registered! Welcome, {name}!")
         return redirect("/")
-    
+
     else:
         return render_template("register.html")
-    
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -134,10 +145,9 @@ def login():
             flash("danger", "Invalid username or password")
             return redirect("/login")
 
-
     else:
         return render_template("login.html")
-    
+
 
 @app.route("/logout")
 def logout():
@@ -174,6 +184,14 @@ def javascript():
     return render_template("javascript.html")
 
 
+@app.route("/quiz")
+@login_required
+def quiz():
+    """Show quiz page"""
+
+    return render_template("quiz.html")
+
+
 @app.route("/account", methods=["GET", "POST"])
 @login_required
 def account():
@@ -185,7 +203,7 @@ def account():
     user = db.execute("SELECT * FROM users WHERE id = ?", user_id)
 
     # User reached route via POST
-    if request.method == "POST":   
+    if request.method == "POST":
         old_password = request.form.get("old_password")
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
@@ -200,7 +218,7 @@ def account():
         elif not confirmation:
             flash("danger", "must confirm your new password")
             return redirect("/account")
-        
+
         if len(new_password) < 8 or len(new_password) > 128:
             flash("danger", "New password must be between 8 and 128 characters.")
             return redirect("/account")
@@ -217,7 +235,7 @@ def account():
 
         # Generate a hash of the new password
         new_hashed_password = sha256_crypt.encrypt(new_password)
-    
+
         # Update password
         db.execute(
             "UPDATE users SET hash = ? WHERE id = ?", new_hashed_password, user_id
@@ -226,12 +244,13 @@ def account():
         # Flash a message and redirect user to home page
         flash("success", "Password was changed successfully!")
         return redirect("/")
-    
+
     else:
         # Get user's informations
         name = user[0]["name"]
         username = user[0]["username"]
         max_score = user[0]["max_pontuation"]
 
-        return render_template("account.html", name=name, username=username, max_score=max_score)
-    
+        return render_template(
+            "account.html", name=name, username=username, max_score=max_score
+        )
