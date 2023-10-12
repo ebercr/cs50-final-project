@@ -1,64 +1,127 @@
-{% extends "layout.html" %}
-
-{% block title %}
-    Index
-{% endblock %}
-
-{% block main %}
-    <!-- Carousel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <a href="/python"><img src="/static/carousel1.jpg" class="d-block w-100" alt="Python"></a>
-            </div>
-            <div class="carousel-item">
-            <a href="/c"><img src="/static/carousel2.jpg" class="d-block w-100" alt="C language"></a>
-            </div>
-            <div class="carousel-item">
-            <a href="/javascript"><img src="/static/carousel3.jpg" class="d-block w-100" alt="JavaScript"></a>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+{% extends "layout.html" %} {% block title %} Index {% endblock %} {% block main
+%}
+<!-- Carousel -->
+<div
+  id="carouselExampleIndicators"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="/python"
+        ><img src="/static/carousel1.jpg" class="d-block w-100" alt="Python"
+      /></a>
     </div>
+    <div class="carousel-item">
+      <a href="/c"
+        ><img
+          src="/static/carousel2.jpg"
+          class="d-block w-100"
+          alt="C language"
+      /></a>
+    </div>
+    <div class="carousel-item">
+      <a href="/javascript"
+        ><img
+          src="/static/carousel3.jpg"
+          class="d-block w-100"
+          alt="JavaScript"
+      /></a>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-    <!-- Main text -->
-    <div id="abt-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="main-title">Eber Webpage</h2>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-fluid" src="/static/code.jpg" alt="code">
-                </div>
-                <div class="col-md-6">
-                    <h3 class="abt-title">Exploring the World of Programming Languages with Eber</h3>
-                    <P>Hi, I'm Eber!</P>
-                    <P>Today, I'm excited to take you on a journey through the fascinating world of programming languages.</P>
-                    <P>This website is a project I've undertaken as part of the CS50 course at Harvard University.</P>
-                    <h4 class="abt-title">The Purpose</h4>
-                    <p>The purpose of this website is to delve into the rich histories of some popular programming languages.</p>
-                    <p>We'll be focusing on languages like Python, C, and JavaScript.</p>
-                    <p>But before we dive into that, let's understand why programming languages are worth exploring.</p>
-                </div>
-                <div class="col-12">
-                    <h4 class="abt-title2">Why Programming Languages Matter</h4>
-                    <ul class="abt-list">
-                        <li>Programming languages are the building blocks of the digital world.</li>
-                        <li>They enable us to communicate with computers and instruct them to perform tasks.</li>
-                        <li>Each language has a unique history, purpose, and impact on the tech industry.</li>
-                    </ul>
-                </div>
-{% endblock %}
+<!-- Main text -->
+<div id="abt-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="main-title">Eber Webpage</h2>
+      </div>
+      <div class="col-md-6">
+        <img class="img-fluid" src="/static/code.jpg" alt="code" />
+      </div>
+      <div class="col-md-6">
+        <h3 class="abt-title">
+          Exploring the World of Programming Languages with Eber
+        </h3>
+        <p>Hi, I'm Eber!</p>
+        <p>
+          Today, I'm excited to take you on a journey through the fascinating
+          world of programming languages.
+        </p>
+        <p>
+          This website is a project I've undertaken as part of the CS50 course
+          at Harvard University.
+        </p>
+        <h4 class="abt-title">The Purpose</h4>
+        <p>
+          The purpose of this website is to delve into the rich histories of
+          some popular programming languages.
+        </p>
+        <p>We'll be focusing on languages like Python, C, and JavaScript.</p>
+        <p>
+          But before we dive into that, let's understand why programming
+          languages are worth exploring.
+        </p>
+      </div>
+      <div class="col-12">
+        <h4 class="abt-title2">Why Programming Languages Matter</h4>
+        <ul class="abt-list">
+          <li>
+            Programming languages are the building blocks of the digital world.
+          </li>
+          <li>
+            They enable us to communicate with computers and instruct them to
+            perform tasks.
+          </li>
+          <li>
+            Each language has a unique history, purpose, and impact on the tech
+            industry.
+          </li>
+        </ul>
+      </div>
+      {% endblock %}
+    </div>
+  </div>
+</div>

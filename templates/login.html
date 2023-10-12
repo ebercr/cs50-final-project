@@ -1,39 +1,51 @@
-{% extends "layout.html" %}
-
-{% block title %}
-    Register
-{% endblock %}
-
-{% block main %}
-    <div class="container d-flex justify-content-center box-container-area mobile-padding">
-
-        <div class="row border rounded-5 p-3 bg-white shadow box-area">
-            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box green-degrade">
-                <div class="featured-image mb-3">
-                    <img src="/static/login-bot-300px.png" class="img-fluid robot_img">
-                </div>
-            </div>
-
-            <div class="col-md-6 right-box">
-                <div class="row align-items-center">
-                    <div class="header-text mb-4">
-                        <h2>Login</h2>
-                        <p>Log in to your account to access this site.</p>
-                    </div>
-                    <form action="/login" method="post">
-                        <div class="mb-3">
-                            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
-                        </div>
-                        <div class="mb-3">
-                            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
-                        </div>
-                        <button class="btn btn-primary mb-3" type="submit">Log In</button>
-                    </form>
-                    <div class="row">
-                        <small>Don't have account? <a href="/register">Register</a></small>
-                    </div>
-                </div>
-            </div>
-        </div>
+{% extends "layout.html" %} {% block title %} Register {% endblock %} {% block
+main %}
+<div
+  class="container d-flex justify-content-center box-container-area mobile-padding"
+>
+  <div class="row border rounded-5 p-3 bg-white shadow box-area">
+    <div
+      class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box green-degrade"
+    >
+      <div class="featured-image mb-3">
+        <img src="/static/login-bot-300px.png" class="img-fluid robot_img" />
+      </div>
     </div>
+
+    <div class="col-md-6 right-box">
+      <div class="row align-items-center">
+        <div class="header-text mb-4">
+          <h2>Login</h2>
+          <p>Log in to your account to access this site.</p>
+        </div>
+        <form action="/login" method="post">
+          <div class="mb-3">
+            <input
+              autocomplete="off"
+              autofocus
+              class="form-control mx-auto w-auto"
+              id="username"
+              name="username"
+              placeholder="Username"
+              type="text"
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              class="form-control mx-auto w-auto"
+              id="password"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <button class="btn btn-primary mb-3" type="submit">Log In</button>
+        </form>
+        <div class="row">
+          <small>Don't have account? <a href="/register">Register</a></small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

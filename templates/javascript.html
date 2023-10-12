@@ -1,34 +1,70 @@
-{% extends "layout.html" %}
-
-{% block title %}
-    JavaScript
-{% endblock %}
-
-{% block main %}
-    <div id="abt-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="main-title2">JavaScript</h2>
-                </div>
-                <div class="col-md-12 text-center">
-                    <img class="img-fluid" src="/static/js-logo.png" alt="JavaScript Logo">
-                </div>
-                <div class="col-md-12 text-center">
-                    <h3 class="abt-title3">History of JavaScript Programming Language</h3>
-                    <p>JavaScript is a dynamic, high-level programming language that plays a pivotal role in web development. It was developed by Brendan Eich in 1995 while he was working at Netscape Communications. Initially named "Mocha" and later "LiveScript," it eventually settled on "JavaScript."</p>
-                    <p>During the late 1990s, JavaScript became essential for creating dynamic and interactive web pages, though it faced challenges due to competing browser implementations, especially between Netscape and Microsoft.</p>
-                    <p>Standardization efforts led to the ECMAScript standard in 1997, with ECMAScript 3 becoming widely adopted. JavaScript continued to evolve, gaining prominence during the Web 2.0 era and the introduction of AJAX.</p>
-                    <p>Modern JavaScript development includes popular frameworks like React, Angular, and Vue.js, as well as server-side usage with Node.js. With the advent of ECMAScript 6 (ES6) and subsequent versions, JavaScript became more versatile and powerful.</p>
-                    <p>Today, JavaScript remains a cornerstone of web development, with a vast ecosystem of libraries, frameworks, and tools.</p>
-                    <p>For more details, you can refer to the <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">source</a>.</p>
-                </div>
-
-            </div>
-            <div class="col-md-6 offset-md-3 text-center">
-                <h3 class="abt-title3">A Brief History of JavaScript, talk by Brendan Eich (creator of JavaScript)</h3>
-                <iframe class="embed-responsive" height="315" src="https://www.youtube.com/embed/qKJP93dWn40?si=JKV-CV5QZzMl0bYZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
+{% extends "layout.html" %} {% block title %} JavaScript {% endblock %} {% block
+main %}
+<div id="abt-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="main-title2">JavaScript</h2>
+      </div>
+      <div class="col-md-12 text-center">
+        <img
+          class="img-fluid"
+          src="/static/js-logo.png"
+          alt="JavaScript Logo"
+        />
+      </div>
+      <div class="col-md-12 text-center">
+        <h3 class="abt-title3">History of JavaScript Programming Language</h3>
+        <p>
+          JavaScript is a dynamic, high-level programming language that plays a
+          pivotal role in web development. It was developed by Brendan Eich in
+          1995 while he was working at Netscape Communications. Initially named
+          "Mocha" and later "LiveScript," it eventually settled on "JavaScript."
+        </p>
+        <p>
+          During the late 1990s, JavaScript became essential for creating
+          dynamic and interactive web pages, though it faced challenges due to
+          competing browser implementations, especially between Netscape and
+          Microsoft.
+        </p>
+        <p>
+          Standardization efforts led to the ECMAScript standard in 1997, with
+          ECMAScript 3 becoming widely adopted. JavaScript continued to evolve,
+          gaining prominence during the Web 2.0 era and the introduction of
+          AJAX.
+        </p>
+        <p>
+          Modern JavaScript development includes popular frameworks like React,
+          Angular, and Vue.js, as well as server-side usage with Node.js. With
+          the advent of ECMAScript 6 (ES6) and subsequent versions, JavaScript
+          became more versatile and powerful.
+        </p>
+        <p>
+          Today, JavaScript remains a cornerstone of web development, with a
+          vast ecosystem of libraries, frameworks, and tools.
+        </p>
+        <p>
+          For more details, you can refer to the
+          <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"
+            >source</a
+          >.
+        </p>
+      </div>
     </div>
+    <div class="col-md-6 offset-md-3 text-center">
+      <h3 class="abt-title3">
+        A Brief History of JavaScript, talk by Brendan Eich (creator of
+        JavaScript)
+      </h3>
+      <iframe
+        class="embed-responsive"
+        height="315"
+        src="https://www.youtube.com/embed/qKJP93dWn40?si=JKV-CV5QZzMl0bYZ"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
 {% endblock %}

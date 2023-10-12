@@ -254,3 +254,33 @@ def account():
         return render_template(
             "account.html", name=name, username=username, max_score=max_score
         )
+
+
+@app.route("/save_score", methods=["POST"])
+def salvar_score():
+    # Extracts 'score' value from POST request
+    score = int(request.form["score"])
+
+    # Query database for user
+    user_id = session["user_id"]
+    user = db.execute("SELECT * FROM users WHERE id = ?", user_id)
+
+    max_score = int(user[0]["max_pontuation"])
+
+    # Atarts "message" with the lowest scoring message
+    message = "Don't worry, everyone starts somewhere. Keep practicing, and you'll improve quickly!"
+
+    # Update the score if it is higher and updates the message according to the result
+    if score > max_score:
+        db.execute("UPDATE users SET max_pontuation = ? WHERE id = ?", score, user_id)
+        message = "🎉 New record saved successfully 🥳"
+    elif score == 20:
+        message = "🎉 Incredible! You achieved the maximum score on the quiz! 🥳"
+    elif score > 14:
+        message = "Your score is impressive. Keep up this exceptional performance and challenge yourself to surpass it next time!"
+    elif score > 7:
+        message = "You're on the right track! With a little more effort and focus, you can achieve an even better score."
+    else:
+        message = "Don't worry, everyone starts somewhere. Keep practicing, and you'll improve quickly!"
+
+    return message
