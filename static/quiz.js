@@ -210,6 +210,14 @@ const scoreElement = document.getElementById("score");
 const answer = document.getElementById("answer");
 const imgBotAnswer = document.getElementById("answer-bot");
 
+// Shuffle the array questions
+function shuffleQuestions(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 // Load questions in html
 function loadQuestion() {
   const question = questions[currentQuestionIndex];
@@ -318,10 +326,14 @@ restartButton.addEventListener("click", function () {
   document.getElementById("next-button").style.display = "block";
   document.getElementById("score").style.display = "block";
 
+  // Shuffle questions array
+  shuffleQuestions(questions);
+
   // Load the first question
   loadQuestion();
 });
 
+shuffleQuestions(questions);
 nextButton.addEventListener("click", checkAnswer);
 toggleButtonText(); // Ensure the button starts with "Check Answer"
 loadQuestion();

@@ -75,9 +75,18 @@
     </div>
     <div id="quiz-results" style="display: none">
       <h3 id="result-message">Congratulations!</h3>
-      <p id="final-score">Your final score: <span id="score-value">0</span></p>
+      <p id="final-score">
+        Your final score: <b><span id="score-value">0</span></b>
+      </p>
       <p id="saved-successfully"></p>
-      <button id="restart-quiz" class="btn btn-primary">Restart quiz</button>
+      <div class="d-flex justify-content-evenly">
+        <a href="/">
+          <button id="redirect-home" class="btn btn-primary">
+            Back to Home
+          </button>
+        </a>
+        <button id="restart-quiz" class="btn btn-primary">Restart Quiz</button>
+      </div>
     </div>
   </div>
 </div>

@@ -15,7 +15,7 @@
 }
 
 .box-container-area {
-  padding: 92px 0 120px 0;
+  padding: 92px 0 10px 0;
 }
 
 .abt-area {
@@ -79,10 +79,6 @@
   width: 100%;
 }
 
-.register-padding {
-  padding-bottom: 40px;
-}
-
 .green-degrade {
   background: linear-gradient(to bottom, #00ff00, #008000);
 }
@@ -118,6 +114,10 @@
 
 /* Media query for mobile devices */
 @media (max-width: 767px) {
+  .main-mobile {
+    padding-bottom: 10px !important;
+  }
+
   .mobile-padding {
     padding-top: 10px;
     padding-bottom: 10px;

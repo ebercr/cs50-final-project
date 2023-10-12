@@ -58,6 +58,9 @@
           {% if session["user_id"] %}
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
+              <a class="nav-link" href="/quiz">Quiz</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/python">Python</a>
             </li>
             <li class="nav-item">
@@ -65,9 +68,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/javascript">JavaScript</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/quiz">Quiz</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mt-2">
@@ -121,7 +121,7 @@
     </header>
     {% endif %}
 
-    <main class="container pt-0 py-5 text-center">
+    <main class="container main-mobile pt-0 py-5 text-center">
       {% block main %}{% endblock %}
     </main>
 
