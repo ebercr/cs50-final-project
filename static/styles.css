@@ -1,147 +1,146 @@
 .content-top {
-    padding-top: 63px;
+  padding-top: 63px;
 }
 
 .box-area {
-    width: 700px;
+  width: 700px;
 }
 
 .box-area-quiz {
-    width: 600px;
+  width: 600px;
 }
 
 #answer-bot {
-    width: 100px;
+  width: 100px;
 }
 
 .box-container-area {
-    padding: 92px 0 120px 0;
+  padding: 92px 0 120px 0;
 }
 
 .abt-area {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .main-title {
-    color: #444;
-    margin: 45px 0 65px 0;
-    font-size: 40px;
-    text-align: center;
+  color: #444;
+  margin: 45px 0 65px 0;
+  font-size: 40px;
+  text-align: center;
 }
 
 .main-title2 {
-    color: #444;
-    margin: 30px 0 30px 0;
-    font-size: 40px;
-    text-align: center;
+  color: #444;
+  margin: 30px 0 30px 0;
+  font-size: 40px;
+  text-align: center;
 }
 
 .abt-title {
-    font-size: 17px;
-    color: #444;
-    font-weight: bold;
+  font-size: 17px;
+  color: #444;
+  font-weight: bold;
 }
 
 .abt-title2 {
-    color: #444;
-    margin: 20px 0 20px 0;
-    font-size: 25px;
-    text-align: center;
+  color: #444;
+  margin: 20px 0 20px 0;
+  font-size: 25px;
+  text-align: center;
 }
 
 .abt-title3 {
-    margin-top: 20px;
-    font-size: 17px;
-    color: #444;
-    font-weight: bold;
+  margin-top: 20px;
+  font-size: 17px;
+  color: #444;
+  font-weight: bold;
 }
 
 .abt-list {
-    list-style-position: inside;
-    font-size: 17px;
-    text-align: center;
+  list-style-position: inside;
+  font-size: 17px;
+  text-align: center;
 }
 
 #copy-area {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 #copy-area .container {
-    padding: 10px 0;
-    text-align: center;
+  padding: 10px 0;
+  text-align: center;
 }
 
 #copy-area .container p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .embed-responsive {
-    width: 100%;
+  width: 100%;
 }
 
 .register-padding {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .green-degrade {
-    background: linear-gradient(to bottom, #00FF00, #008000);
+  background: linear-gradient(to bottom, #00ff00, #008000);
 }
 
 .robot_img {
-    width: 250px;
+  width: 250px;
 }
 
-/* Estilo para o contêiner do quiz */
+/* Style for the quiz container */
 #quiz-container {
-    margin-top: 20px;
-    text-align: left;
+  margin-top: 20px;
+  text-align: left;
 }
 
-/* Estilo para as opções de resposta */
+/* Style for response options */
 .form-check-input {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .form-check-label {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
-/* Estilo para o botão Próxima Pergunta */
+/* Style for the Next Question button */
 #next-button {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
-/* Estilo para a pontuação */
+/* Punctuation style */
 #score {
-    margin-top: 10px;
-    
+  margin-top: 10px;
 }
 
-/* Media query para dispositivos móveis (tamanho de tela menor que 768 pixels) */
+/* Media query for mobile devices */
 @media (max-width: 767px) {
-    .mobile-padding {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+  .mobile-padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-    .box-area {
-        margin: 0 10px;
-    }
+  .box-area {
+    margin: 0 10px;
+  }
 
-    .left-box {
-        position: relative;
-        height: 130px;
-    }
+  .left-box {
+    position: relative;
+    height: 130px;
+  }
 
-    .right-box {
-        padding: 20px;
-    }
+  .right-box {
+    padding: 20px;
+  }
 
-    .robot_img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 120px;
-    }
+  .robot_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+  }
 }
