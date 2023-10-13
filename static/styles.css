@@ -1,15 +1,19 @@
+/* Padding to replace the navbar space */
 .content-top {
   padding-top: 63px;
 }
 
+/* Box for the login, registration, account area */
 .box-area {
   width: 700px;
 }
 
+/* Box for the quiz area */
 .box-area-quiz {
   width: 600px;
 }
 
+/* Bot img at the top of the quiz box */
 #answer-bot {
   width: 100px;
 }
@@ -18,6 +22,7 @@
   padding: 92px 0 10px 0;
 }
 
+/* About area in the index page */
 .abt-area {
   background-color: #f9f9f9;
 }
@@ -62,6 +67,7 @@
   text-align: center;
 }
 
+/* Style for the copy area (footer) */
 #copy-area {
   background-color: #f1f1f1;
 }
@@ -75,6 +81,7 @@
   margin-bottom: 0;
 }
 
+/* make videos responsive */
 .embed-responsive {
   width: 100%;
 }
@@ -83,6 +90,7 @@
   background: linear-gradient(to bottom, #00ff00, #008000);
 }
 
+/* Bot img at login, register, account area */
 .robot_img {
   width: 250px;
 }
@@ -100,11 +108,6 @@
 
 .form-check-label {
   margin-left: 5px;
-}
-
-/* Style for the Next Question button */
-#next-button {
-  margin-top: 15px;
 }
 
 /* Punctuation style */

@@ -273,7 +273,7 @@ def salvar_score():
     # Update the score if it is higher and updates the message according to the result
     if score > max_score:
         db.execute("UPDATE users SET max_pontuation = ? WHERE id = ?", score, user_id)
-        message = "🎉 New record saved successfully 🥳"
+        message = "🎉 Great job! Your new record has been successfully saved. Keep up the good work! 👏 🥳"
     elif score == 20:
         message = "🎉 Incredible! You achieved the maximum score on the quiz! 🥳"
     elif score > 14:

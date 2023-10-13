@@ -205,6 +205,7 @@ const optionElements = [
 ];
 const nextButton = document.getElementById("next-button");
 const scoreElement = document.getElementById("score");
+const questionCountElement = document.getElementById("question-count");
 
 // HTML elements to correct answer
 const answer = document.getElementById("answer");
@@ -225,14 +226,19 @@ function loadQuestion() {
   for (let i = 0; i < 5; i++) {
     optionElements[i].textContent = question.options[i];
   }
+  questionCountElement.textContent = `Question ${currentQuestionIndex + 1} of ${
+    questions.length
+  }`;
 }
 
-// Toggle button text between "Check Answer" and "Next question"
+// Toggle button text between "Check Answer", "Next question" and "Finish the Quiz"
 function toggleButtonText() {
   if (isCheckingAnswer) {
     nextButton.textContent = "Check Answer";
-  } else {
+  } else if (currentQuestionIndex < questions.length - 1) {
     nextButton.textContent = "Next question";
+  } else {
+    nextButton.textContent = "Finish Quiz";
   }
 }
 
