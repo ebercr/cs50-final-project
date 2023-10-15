@@ -36,7 +36,13 @@ def login_required(f):
 def index():
     """Show index page"""
 
-    return render_template("index.html")
+    user_id = session["user_id"]
+    name = db.execute("SELECT name FROM users WHERE id = ?", user_id)
+    
+    # Get user's informations
+    name = name[0]["name"]
+
+    return render_template("index.html", name=name)
 
 
 @app.route("/register", methods=["GET", "POST"])
